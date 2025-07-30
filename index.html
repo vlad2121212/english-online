@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Викладання англійської онлайн — Яна Сорока</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdfefe;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      background: #1abc9c;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-left: 10px;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #16a085;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1584697964093-15d09fbbef8d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 150px 20px 100px;
+      position: relative;
+    }
+    header h1 {
+      font-size: 42px;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 12px;
+      text-transform: uppercase;
+    }
+
+    main section {
+      display: none;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h2 {
+      color: #1abc9c;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "\2713 ";
+      color: #1abc9c;
+      margin-right: 5px;
+    }
+    .illustration {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .illustration img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+    .contact {
+      background: #ecf0f1;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, select, button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #1abc9c;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover {
+      background-color: #16a085;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      padding: 15px;
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" onclick="showSection('about')">Про мене</a>
+    <a href="#" onclick="showSection('prices')">Ціни</a>
+    <a href="#" onclick="showSection('contact')">Контакти</a>
+    <a href="#" onclick="showSection('signup')">Записатись на заняття</a>
+  </nav>
+
+  <header>
+    <h1>Викладання англійської мови онлайн</h1>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>Про мене</h2>
+      <p>Мене звати Сорока Яна Андріївна, я викладач англійської мови з понад 6-річним досвідом. Працюю з учнями різного віку — від дітей до дорослих. Проводжу індивідуальні онлайн-заняття, а також групові уроки для дітей. Заняття з дітьми проводяться за сучасними методиками: перегляд мультфільмів англійською, інтерактивні ігри та веселі вправи для кращого засвоєння матеріалу.</p>
+      <div class="illustration">
+        <img src="https://images.unsplash.com/photo-1600195077078-57fe244ee5e7?auto=format&fit=crop&w=1000&q=80" alt="Про викладача">
+      </div>
+    </section>
+
+    <section id="prices">
+      <h2>Ціни на заняття</h2>
+      <ul>
+        <li>Індивідуальне заняття — 250–300 грн / 60 хв</li>
+        <li>Групове заняття (діти) — 150 грн / 60 хв</li>
+      </ul>
+      <div class="illustration">
+        <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=1000&q=80" alt="Ціни на уроки">
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Контакти</h2>
+      <div class="contact">
+        <p>📞 Телефон: <a href="tel:+380935712547">+380 93 571 2547</a><br>
+        📧 Email: yanateacher@gmail.com<br>
+        📱 Telegram: <a href="https://t.me/yanasoroka">@yanasoroka</a></p>
+        <p><strong>Запис на заняття здійснюється через Telegram.</strong></p>
+      </div>
+      <div class="illustration">
+        <img src="https://images.unsplash.com/photo-1587560699334-bea93391dcef?auto=format&fit=crop&w=1000&q=80" alt="Контакти">
+      </div>
+    </section>
+
+    <section id="signup">
+      <h2>Записатись на заняття</h2>
+      <form>
+        <input type="text" placeholder="ПІБ" required>
+        <input type="tel" placeholder="Номер телефону" required>
+        <select required>
+          <option value="">Оберіть категорію</option>
+          <option value="ind">Індивідуальне заняття</option>
+          <option value="group">Групове заняття</option>
+        </select>
+        <button type="submit">Відправити заявку</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Сорока Яна. Усі права захищено.
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('main section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
